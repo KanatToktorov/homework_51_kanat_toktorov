@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+{% if happy <= 30 %}
+    <img src='{% static "images\cat1.jpg" %}' style="width: 200px; height: auto" alt="">
+{% elif  happy <= 60 %}
+    <img src='{% static "images\cat2.jpg" %}' style="width: 200px; height: auto" alt="">
+{% elif  happy <= 100 %}
+    <img src='{% static "images\cat3.jpg" %}' style="width: 200px; height: auto" alt="">
+
+{% endif %}
+<h2>Кот - {{ name }}</h2>
+<h2>Возраст кота - {{ age }}</h2>
+<h2>Уровень счастья - {{ happy }}</h2>
+<h2>Уровень сытости - {{ satiety }}</h2>
+
+<img src="{% static img_path %}" alt="">
+<select name="action" id="">
+    <option value="play">поиграть с котом</option>
+    <option value="feed">покормить кота</option>
+    <option value="sleep">уложить спать кота</option>
+</select>
+
+</body>
+</html>
+
+
+
+
+
+
